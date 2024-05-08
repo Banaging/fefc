@@ -79,11 +79,11 @@
   </header><!-- End Header -->
   <!-- End Header -->
 
-  <main id="main">
+   <main id="main" class="sticked-header-offset">
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+      <div class="page-header d-flex align-items-center" style="background-image: url(&#39;&#39;);">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
@@ -97,22 +97,22 @@
 
     <!-- ======= Blog Section ======= -->
     <section id="blog" class="blog">
-      <div class="container" data-aos="fade-up">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
 
         <div class="row gy-4 posts-list">
-          
-           <!-- Choosing Input -->
+
+          <!-- Image Input -->
           <div class="col-xl-4 col-md-6">
             <article>
               <div class="container p-4">
-                <button type="button" class ="btn btn-custom-color" onclick="init()">Webcam</button>   
+                <button type="button" class="btn btn-custom-color" onclick="init()">Webcam</button>   
                 <label for="imageInput" class="btn btn-custom-color">Upload</label>
                 <input type="file" id="imageInput" accept="image/*" style="display:none">
               </div>
               <div class="container py-4">
                 <label for="species">Choose a model:</label>
                 <select id="species" onchange="selectSpecies()" name="species">
-                  <option value="" selected disabled hidden>None</option>
+                  <option value="" selected="" disabled="" hidden="">None</option>
                   <option value="Bangrus">Bangrus</option>
                   <option value="Johnius">Leaftail Croaker</option>
                   <option value="Tilapia">Tilapia</option>
@@ -127,13 +127,13 @@
 
             </article>
           </div><!-- End post list item -->
-      
+
           <!-- Model Prediction -->
           <div class="col-xl-4 col-md-6">
             <article>
 
               <div class="post-img">
-                 <canvas id="myChart"></canvas>   
+                 <canvas id="myChart" style="display: block; box-sizing: border-box; height: 208px; width: 416px;" width="416" height="208"></canvas>   
               </div>
 
               <h2 class="title">
@@ -145,24 +145,23 @@
             </article>
           </div><!-- End post list item -->
 
-<!-- Image Input -->
+          <!-- Choosing Input -->
           <div class="col-xl-4 col-md-6">
             <article>
 
               <div class="post-img">                
-                <img id="image" class="w-100 mb-3" src="assets/img/placeholder.png" style="display:block;">
+                <img id="image" class="w-100 mb-3" src="./Alpha MJPG System Demo_files/placeholder.png" style="display:block;">
                 <div id="webcam-container"></div>
               </div>
 
               <h2 class="title">
                 <p>Image Input</p>
               </h2>
-              <p class="post-category">Currently Selected Model: <p id="speciesLabel">None</p></p>
+              <p class="post-category">Currently Selected Model: </p><p id="speciesLabel">None</p><p></p>
 
 
             </article>
           </div><!-- End post list item -->
-
 
         </div><!-- End blog posts list -->
 
